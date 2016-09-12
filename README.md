@@ -3,7 +3,18 @@ Android onboarding library.
 
 ![](preview/preview.gif)
 
-##Usage
+##Installation
+
+###Gradle
+Add it as a dependency in your app's build.gradle file
+
+```groovy
+dependencies {
+    compile 'com.codemybrainsout.onboarding:onboarder:1.0.0'
+}
+```
+
+##How to use
 
 ###First of all, you will have to extend your activity like this
 
@@ -11,7 +22,7 @@ Android onboarding library.
 public class YourActivity extends AhoyOnboarderActivity {
 ```
 
-###Then, Create **AhoyOnboarderCard** and configure it accordingly
+###Then, Create `AhoyOnboarderCard` and configure it accordingly
 
 ```java
 AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Title", "Description", R.drawable.icon1);
@@ -32,23 +43,23 @@ pages.add(ahoyOnboarderCard3);
 setOnboardPages(pages);
 ```
 
-###Choose one of these three background types
+###Choose from one of these three background types
 
-**Gradient Background**
+- **Gradient Background**
 ```java
 setGradientBackground();
 ```
 
 ![](preview/preview-gradient.png)
 
-**Image Background**
+- **Image Background**
 ```java
 setImageBackground(R.drawable.image);
 ```
 
 ![](preview/preview-image.png)
 
-**Solid Background**
+- **Solid Background**
 
 ```java
 List<Integer> colorList = new ArrayList<>();
@@ -83,6 +94,10 @@ setActiveIndicatorColor(R.color.white);
 //Set finish button text
 setFinishButtonTitle("Get Started");
 ```
+
+#Thanks
+* [dynamitechetan/Flowing-Gradient](https://github.com/dynamitechetan/Flowing-Gradient)
+* [chyrta/AndroidOnboarder](https://github.com/chyrta/AndroidOnboarder)
 
 #License
 ```

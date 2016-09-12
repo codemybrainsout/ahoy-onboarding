@@ -24,3 +24,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:cardview-v7:24.1.1'
 }
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

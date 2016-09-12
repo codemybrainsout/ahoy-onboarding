@@ -16,13 +16,13 @@ dependencies {
 
 ##How to use
 
-###First of all, you will have to extend your activity like this
+**First of all, you will have to extend your activity like this**
 
 ```java
 public class YourActivity extends AhoyOnboarderActivity {
 ```
 
-###Then, Create `AhoyOnboarderCard` and configure it accordingly
+**Then, Create `AhoyOnboarderCard` and configure it accordingly**
 
 ```java
 AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Title", "Description", R.drawable.icon1);
@@ -31,7 +31,7 @@ ahoyOnboarderCard1.setTitleColor(R.color.white);
 ahoyOnboarderCard1.setDescriptionColor(R.color.grey_200);
 ```
 
-###After that, Create a list of cards and set them using
+**After that, Create a list of cards and set them using**
 
 ```java
 List<AhoyOnboarderCard> pages = new ArrayList<>();
@@ -75,13 +75,13 @@ setColorBackground(R.color.solid_one);
 
 ![](preview/preview-solid.png)
 
-###You can also customise the font to match your app
+**You can also customise the font to match your app**
 ```java
 Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 setFont(face);
 ```
 
-###Other properties
+**Other properties**
 ```java
 
 //Show/Hide navigation controls

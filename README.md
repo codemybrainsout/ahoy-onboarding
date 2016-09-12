@@ -31,21 +31,21 @@ setOnboardPages(pages);
 
 ###Choose one of these three background types
 
-1. Gradient
+*Gradient
 ```java
 setGradientBackground();
 ```
 
 ![](preview/preview-gradient.png)
 
-2. Image
+*Image
 ```java
 setImageBackground(R.drawable.image);
 ```
 
 ![](preview/preview-image.png)
 
-3. Solid
+*Solid
 
 ```java
 List<Integer> colorList = new ArrayList<>();

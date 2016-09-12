@@ -14,38 +14,41 @@ public class YourActivity extends AhoyOnboarderActivity {
 ###Then, Create **AhoyOnboarderCard** and configure it accordingly
 
 ```java
-AhoyOnboarderCard ahoyOnboarderCard = new AhoyOnboarderCard("Title", "Description", R.drawable.icon1);
-ahoyOnboarderCard.setBackgroundColor(R.color.black_transparent);
-ahoyOnboarderCard.setTitleColor(R.color.white);
-ahoyOnboarderCard.setDescriptionColor(R.color.grey_200);
+AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Title", "Description", R.drawable.icon1);
+ahoyOnboarderCard1.setBackgroundColor(R.color.black_transparent);
+ahoyOnboarderCard1.setTitleColor(R.color.white);
+ahoyOnboarderCard1.setDescriptionColor(R.color.grey_200);
 ```
 
 ###After that, Create a list of cards and set them using
 
 ```java
 List<AhoyOnboarderCard> pages = new ArrayList<>();
-pages.add(ahoyOnboarderCard);
+pages.add(ahoyOnboarderCard1);
+pages.add(ahoyOnboarderCard2);
+pages.add(ahoyOnboarderCard3);
+...
 
 setOnboardPages(pages);
 ```
 
 ###Choose one of these three background types
 
-*Gradient
+**Gradient Background**
 ```java
 setGradientBackground();
 ```
 
 ![](preview/preview-gradient.png)
 
-*Image
+**Image Background**
 ```java
 setImageBackground(R.drawable.image);
 ```
 
 ![](preview/preview-image.png)
 
-*Solid
+**Solid Background**
 
 ```java
 List<Integer> colorList = new ArrayList<>();
@@ -65,6 +68,20 @@ setColorBackground(R.color.solid_one);
 ```java
 Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 setFont(face);
+```
+
+###Other properties
+```java
+
+//Show/Hide navigation controls
+showNavigationControls(false);
+
+//Set pager indicator colors
+setInactiveIndicatorColor(R.color.grey);
+setActiveIndicatorColor(R.color.white);
+
+//Set finish button text
+setFinishButtonTitle("Get Started");
 ```
 
 #License

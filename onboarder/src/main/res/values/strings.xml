@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ahoy!</string>
+    <string name="button.finish">FINISH</string>
+    <string name="button.next">NEXT</string>
+    <string name="button.skip">SKIP</string>
+</resources>

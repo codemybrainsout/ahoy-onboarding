@@ -27,7 +27,7 @@
                 android:id="@+id/iv_image"
                 android:layout_width="@dimen/section_image_item"
                 android:layout_height="@dimen/section_image_item"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
@@ -38,7 +38,7 @@
                 android:layout_gravity="bottom"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -61,7 +61,7 @@
                     android:gravity="center"
                     android:textSize="16sp"
                     android:textColor="@color/grey_600"
-                    tools:text="Just how much text can you fill up in this text box before" />
+                    tools:text="A long description about my application" />
 
             </LinearLayout>
 

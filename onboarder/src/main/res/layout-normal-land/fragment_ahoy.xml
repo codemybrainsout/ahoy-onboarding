@@ -16,7 +16,6 @@
         android:layout_marginBottom="40dp"
         app:cardCornerRadius="6dp">
 
-
         <FrameLayout
             android:padding="@dimen/activity_margin"
             android:layout_width="match_parent"
@@ -27,18 +26,17 @@
                 android:id="@+id/iv_image"
                 android:layout_width="@dimen/section_image_item"
                 android:layout_height="@dimen/section_image_item"
-                android:layout_marginTop="50dp"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/forth_bg"
+                android:layout_gravity="start|center_vertical"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_width="340dp"
+                android:layout_height="180dp"
+                android:layout_gravity="end|center_vertical"
                 android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -49,19 +47,19 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="22sp"
-                    tools:text="Section First" />
+                    tools:text="City Guide" />
 
                 <TextView
                     android:id="@+id/tv_description"
                     style="@style/TextAppearance.AppCompat.Body1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginTop="10dp"
                     android:alpha="0.7"
                     android:gravity="center"
                     android:textSize="16sp"
                     android:textColor="@color/grey_600"
-                    tools:text="Just how much text can you fill up in this text box before" />
+                    tools:text="Detailed guides to help you plan your trip before the holiday times catch up with everyting else you have planned" />
 
             </LinearLayout>
 

@@ -1,5 +1,5 @@
 # Ahoy! Onboarding
-Onboarding library for android with Gradient, Image or Solid color backgrounds..
+Onboarding library for android with Gradient, Image or Solid color backgrounds.
 
 ![](preview/preview.gif)
 
@@ -7,7 +7,6 @@ Onboarding library for android with Gradient, Image or Solid color backgrounds..
 
 ###Gradle
 Add it as a dependency in your app's build.gradle file
-*(will be available shortly)*
 
 ```groovy
 dependencies {

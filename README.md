@@ -81,7 +81,7 @@ Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 setFont(face);
 ```
 
-***Works in Landscape mode too***
+**Works in Landscape mode too**
 
 ![](preview/preview-landscape.png)
 
@@ -104,7 +104,7 @@ setFinishButtonTitle("Get Started");
 * [chyrta/AndroidOnboarder](https://github.com/chyrta/AndroidOnboarder)
 
 #Support
-If you've any questions regarding this library, please contact us at help@codemybrainsout.com (email subject: <<Ahoy! Onboarding Support/Feedback>>)
+If you've any questions regarding this library, please contact us at help@codemybrainsout.com
 
 #License
 ```

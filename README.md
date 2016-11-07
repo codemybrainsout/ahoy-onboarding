@@ -10,7 +10,7 @@ Add it as a dependency in your app's build.gradle file
 
 ```groovy
 dependencies {
-    compile 'com.codemybrainsout.onboarding:onboarder:1.0.0'
+    compile 'com.codemybrainsout.onboarding:onboarder:1.0.1'
 }
 ```
 
@@ -81,6 +81,10 @@ Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 setFont(face);
 ```
 
+***Works in Landscape mode too***
+
+![](preview/preview-landscape.png)
+
 **Other properties**
 ```java
 
@@ -98,6 +102,9 @@ setFinishButtonTitle("Get Started");
 #Thanks
 * [dynamitechetan/Flowing-Gradient](https://github.com/dynamitechetan/Flowing-Gradient)
 * [chyrta/AndroidOnboarder](https://github.com/chyrta/AndroidOnboarder)
+
+#Support
+If you've any questions regarding this library, please contact us at help@codemybrainsout.com (email subject: <<Ahoy! Onboarding Support/Feedback>>)
 
 #License
 ```

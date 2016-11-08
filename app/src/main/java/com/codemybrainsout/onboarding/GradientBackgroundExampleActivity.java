@@ -1,7 +1,9 @@
 package com.codemybrainsout.onboarding;
 
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
 import com.codemybrainsout.onboarder.AhoyOnboarderActivity;
@@ -38,6 +40,11 @@ public class GradientBackgroundExampleActivity extends AhoyOnboarderActivity {
         setFinishButtonTitle("Finish");
         showNavigationControls(true);
         setGradientBackground();
+
+        //set the button style you created
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            setFinishButtonDrawableStyle(ContextCompat.getDrawable(this, R.drawable.rectangle_button));
+        }
 
         Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         setFont(face);

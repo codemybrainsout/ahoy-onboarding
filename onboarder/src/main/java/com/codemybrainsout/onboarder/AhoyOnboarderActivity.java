@@ -4,11 +4,13 @@ import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IntegerRes;
+import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -63,7 +65,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
         ivNext = (ImageView) findViewById(R.id.ivNext);
         ivPrev = (ImageView) findViewById(R.id.ivPrev);
         backgroundImage = (ImageView) findViewById(R.id.background_image);
-        backgroundImageOverlay = (View) findViewById(R.id.background_image_overlay);
+        backgroundImageOverlay = findViewById(R.id.background_image_overlay);
         vpOnboarderPager = (ViewPager) findViewById(R.id.vp_pager);
         vpOnboarderPager.addOnPageChangeListener(this);
         btnSkip.setOnClickListener(this);
@@ -127,6 +129,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
         circleIndicatorView.setCurrentPage(position);
 
         if (position == lastPagePosition) {
+            fadeOut(circleIndicatorView);
             showFinish();
             fadeOut(ivNext);
             fadeIn(ivPrev);
@@ -134,6 +137,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
             fadeOut(ivPrev);
             fadeIn(ivNext);
         } else {
+            fadeIn(circleIndicatorView);
             hideFinish();
             fadeIn(ivPrev);
             fadeIn(ivNext);
@@ -199,6 +203,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
                 @Override
                 public void onAnimationEnd(Animation animation) {
+
                     v.setVisibility(View.VISIBLE);
                 }
 
@@ -213,7 +218,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
     private void showFinish() {
         btnSkip.setVisibility(View.VISIBLE);
-        this.btnSkip.animate().translationY(0 - dpToPixels(5, this)).setInterpolator(new DecelerateInterpolator()).setDuration(250).start();
+        this.btnSkip.animate().translationY(0 - dpToPixels(5, this)).setInterpolator(new DecelerateInterpolator()).setDuration(500).start();
     }
 
     private void hideFinish(boolean delay) {
@@ -231,6 +236,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
             @Override
             public void onAnimationEnd(Animator animator) {
+
                 btnSkip.setVisibility(View.VISIBLE);
             }
 
@@ -304,6 +310,20 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
     public void setActiveIndicatorColor(int color) {
         this.circleIndicatorView.setActiveIndicatorColor(color);
+    }
+
+    /**
+     * <br/><br/>
+     * <b>N.B. Builds before JELLY_BEAN will use the default style</b>
+     * <br/><br/>
+     * Set the xml drawable style of the skip/done button, <br/>
+     * using ContextCompat.getDrawable(this,R.color.colorPrimary);
+     *
+     * @param res A drawable xml file representing your desired button style
+     * */
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public void setFinishButtonDrawableStyle(Drawable res){
+        btnSkip.setBackground(res);
     }
 
     public void setFinishButtonTitle(CharSequence title) {

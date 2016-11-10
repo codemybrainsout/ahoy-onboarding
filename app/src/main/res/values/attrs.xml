@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="gradient">
+
+        <attr name="transition_drawable" format="enum"/>
+        <attr name="transition_duration" format="integer"/>
+    </declare-styleable>
+
+</resources>

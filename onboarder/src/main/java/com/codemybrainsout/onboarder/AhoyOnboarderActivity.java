@@ -317,7 +317,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
      * <b>N.B. Builds before JELLY_BEAN will use the default style</b>
      * <br/><br/>
      * Set the xml drawable style of the skip/done button, <br/>
-     * using ContextCompat.getDrawable(this,R.color.colorPrimary);
+     * using for example: ContextCompat.getDrawable(this, R.drawable.rectangle_button);
      *
      * @param res A drawable xml file representing your desired button style
      * */

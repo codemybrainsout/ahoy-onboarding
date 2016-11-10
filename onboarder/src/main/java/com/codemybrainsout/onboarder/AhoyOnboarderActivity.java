@@ -65,7 +65,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
         ivNext = (ImageView) findViewById(R.id.ivNext);
         ivPrev = (ImageView) findViewById(R.id.ivPrev);
         backgroundImage = (ImageView) findViewById(R.id.background_image);
-        backgroundImageOverlay = findViewById(R.id.background_image_overlay);
+        backgroundImageOverlay = (View) findViewById(R.id.background_image_overlay);
         vpOnboarderPager = (ViewPager) findViewById(R.id.vp_pager);
         vpOnboarderPager.addOnPageChangeListener(this);
         btnSkip.setOnClickListener(this);

@@ -29,8 +29,8 @@ AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Title", "Descripti
 ahoyOnboarderCard1.setBackgroundColor(R.color.black_transparent);
 ahoyOnboarderCard1.setTitleColor(R.color.white);
 ahoyOnboarderCard1.setDescriptionColor(R.color.grey_200);
-ahoyOnboarderCard1.setTitleTextSize(dpToPixels(18, this));
-ahoyOnboarderCard1.setDescriptionTextSize(dpToPixels(14, this));
+ahoyOnboarderCard1.setTitleTextSize(dpToPixels(10, this));
+ahoyOnboarderCard1.setDescriptionTextSize(dpToPixels(8, this));
 ```
 
 **After that, Create a list of cards and set them using**

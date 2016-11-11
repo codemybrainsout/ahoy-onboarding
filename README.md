@@ -10,7 +10,7 @@ Add it as a dependency in your app's build.gradle file
 
 ```groovy
 dependencies {
-    compile 'com.codemybrainsout.onboarding:onboarder:1.0.1'
+    compile 'com.codemybrainsout.onboarding:onboarder:1.0.2'
 }
 ```
 
@@ -29,6 +29,8 @@ AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Title", "Descripti
 ahoyOnboarderCard1.setBackgroundColor(R.color.black_transparent);
 ahoyOnboarderCard1.setTitleColor(R.color.white);
 ahoyOnboarderCard1.setDescriptionColor(R.color.grey_200);
+ahoyOnboarderCard1.setTitleTextSize(dpToPixels(18, this));
+ahoyOnboarderCard1.setDescriptionTextSize(dpToPixels(14, this));
 ```
 
 **After that, Create a list of cards and set them using**
@@ -81,11 +83,11 @@ Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 setFont(face);
 ```
 
-**Works in Landscape mode too**
+###Landscape mode
 
 ![](preview/preview-landscape.png)
 
-**Other properties**
+###Other properties
 ```java
 
 //Show/Hide navigation controls
@@ -97,14 +99,39 @@ setActiveIndicatorColor(R.color.white);
 
 //Set finish button text
 setFinishButtonTitle("Get Started");
+
+//Set the finish button style
+setFinishButtonDrawableStyle(ContextCompat.getDrawable(this, R.drawable.rounded_button));
 ```
 
-#Thanks
+##Thanks
 * [dynamitechetan/Flowing-Gradient](https://github.com/dynamitechetan/Flowing-Gradient)
 * [chyrta/AndroidOnboarder](https://github.com/chyrta/AndroidOnboarder)
 
-#Support
+##Changelog
+
+###v1.0.1
+
+Landscape layout by [Maxwell](https://github.com/wax911)
+
+###v1.0.2
+
+FinishButtonDrawableStyle by [Maxwell](https://github.com/wax911)
+
+##Support
 If you've any questions regarding this library, please contact us at help@codemybrainsout.com
+
+##Credits
+
+This project was initiated by **Code My Brains Out**. You can contribute to this project by submitting issues or/and by forking this repo and sending a pull request.
+
+![](http://codemybrainsout.com/files/img/logo-small.png)
+
+Follow us on:
+
+[![Facebook](http://codemybrainsout.com/files/img/fb.png)](https://www.facebook.com/codemybrainsout)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Twitter](http://codemybrainsout.com/files/img/tw.png)](https://twitter.com/codemybrainsout)
+
+Author: [Rahul Juneja](https://github.com/ahulr)
 
 #License
 ```

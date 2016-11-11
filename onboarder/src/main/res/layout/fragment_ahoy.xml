@@ -9,25 +9,25 @@
         android:id="@+id/cv_cardview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="40dp"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="6dp">
 
         <FrameLayout
-            android:padding="@dimen/activity_margin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin">
 
             <ImageView
                 android:id="@+id/iv_image"
                 android:layout_width="@dimen/section_image_item"
                 android:layout_height="@dimen/section_image_item"
-                android:layout_marginTop="80dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
 
@@ -35,11 +35,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:paddingBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp">
 
                 <TextView
                     android:id="@+id/tv_title"
@@ -58,8 +61,8 @@
                     android:layout_marginTop="@dimen/activity_margin"
                     android:alpha="0.7"
                     android:gravity="center"
-                    android:textSize="16sp"
                     android:textColor="@color/grey_600"
+                    android:textSize="16sp"
                     tools:text="A long description about my application" />
 
             </LinearLayout>

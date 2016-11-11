@@ -88,7 +88,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
     }
 
-    private float dpToPixels(int dp, Context context) {
+    public float dpToPixels(int dp, Context context) {
         return dp * (context.getResources().getDisplayMetrics().density);
     }
 
@@ -126,6 +126,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
         int firstPagePosition = 0;
         int lastPagePosition = ahoyOnboarderAdapter.getCount() - 1;
+        circleIndicatorView.setCurrentPage(position);
         circleIndicatorView.setCurrentPage(position);
 
         if (position == lastPagePosition) {

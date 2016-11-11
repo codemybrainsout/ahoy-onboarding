@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/rounded_button"
+            android:elevation="4dp"
             android:text="@string/button.finish"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -59,14 +60,14 @@
                 android:id="@+id/ivPrev"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_gravity="start"
+                android:layout_gravity="left"
                 android:src="@drawable/previous" />
 
             <ImageView
                 android:id="@+id/ivNext"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_gravity="end"
+                android:layout_gravity="right"
                 android:src="@drawable/next" />
 
         </FrameLayout>

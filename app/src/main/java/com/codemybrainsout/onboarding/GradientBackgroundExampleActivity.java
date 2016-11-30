@@ -40,6 +40,7 @@ public class GradientBackgroundExampleActivity extends AhoyOnboarderActivity {
             page.setDescriptionColor(R.color.grey_200);
             page.setTitleTextSize(dpToPixels(12, this));
             page.setDescriptionTextSize(dpToPixels(8, this));
+            //page.setIconLayoutParams(width, height, marginTop, marginLeft, marginRight, marginBottom);
         }
 
         setFinishButtonTitle("Finish");
@@ -55,7 +56,6 @@ public class GradientBackgroundExampleActivity extends AhoyOnboarderActivity {
         setFont(face);
 
         setOnboardPages(pages);
-
     }
 
     @Override

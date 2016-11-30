@@ -10,7 +10,7 @@ Add it as a dependency in your app's build.gradle file
 
 ```groovy
 dependencies {
-    compile 'com.codemybrainsout.onboarding:onboarder:1.0.2'
+    compile 'com.codemybrainsout.onboarding:onboarder:1.0.3'
 }
 ```
 
@@ -31,6 +31,7 @@ ahoyOnboarderCard1.setTitleColor(R.color.white);
 ahoyOnboarderCard1.setDescriptionColor(R.color.grey_200);
 ahoyOnboarderCard1.setTitleTextSize(dpToPixels(10, this));
 ahoyOnboarderCard1.setDescriptionTextSize(dpToPixels(8, this));
+ahoyOnboarderCard1.setIconLayoutParams(iconWidth, iconHeight, marginTop, marginLeft, marginRight, marginBottom);
 ```
 
 **After that, Create a list of cards and set them using**

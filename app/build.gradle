@@ -8,8 +8,8 @@ android {
         applicationId "com.codemybrainsout.onboarding"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "1.0.3"
     }
     buildTypes {
         release {

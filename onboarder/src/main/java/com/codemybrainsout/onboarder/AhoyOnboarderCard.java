@@ -26,10 +26,16 @@ public class AhoyOnboarderCard {
 
     public float titleTextSize;
     public float descriptionTextSize;
+    public int iconWidth, iconHeight, marginTop, marginLeft, marginRight, marginBottom;
 
     public AhoyOnboarderCard(String title, String description) {
         this.title = title;
         this.description = description;
+    }
+
+    public AhoyOnboarderCard(int title, int description) {
+        this.titleResourceId = title;
+        this.descriptionResourceId = description;
     }
 
     public AhoyOnboarderCard(String title, String description, int imageResourceId) {
@@ -42,11 +48,6 @@ public class AhoyOnboarderCard {
         this.title = title;
         this.description = description;
         this.imageResource = imageResource;
-    }
-
-    public AhoyOnboarderCard(int title, int description) {
-        this.titleResourceId = title;
-        this.descriptionResourceId = description;
     }
 
     public AhoyOnboarderCard(int title, int description, int imageResourceId) {
@@ -123,5 +124,38 @@ public class AhoyOnboarderCard {
 
     public void setBackgroundColor(int backgroundColor) {
         this.backgroundColor = backgroundColor;
+    }
+
+    public int getIconWidth() {
+        return iconWidth;
+    }
+
+    public void setIconLayoutParams(int iconWidth, int iconHeight, int marginTop, int marginLeft, int marginRight, int marginBottom) {
+        this.iconWidth = iconWidth;
+        this.iconHeight = iconHeight;
+        this.marginLeft = marginLeft;
+        this.marginRight = marginRight;
+        this.marginTop = marginTop;
+        this.marginBottom = marginBottom;
+    }
+
+    public int getIconHeight() {
+        return iconHeight;
+    }
+
+    public int getMarginTop() {
+        return marginTop;
+    }
+
+    public int getMarginLeft() {
+        return marginLeft;
+    }
+
+    public int getMarginRight() {
+        return marginRight;
+    }
+
+    public int getMarginBottom() {
+        return marginBottom;
     }
 }

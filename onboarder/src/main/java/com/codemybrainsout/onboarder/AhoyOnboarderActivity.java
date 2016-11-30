@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -321,9 +322,9 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
      * using for example: ContextCompat.getDrawable(this, R.drawable.rectangle_button);
      *
      * @param res A drawable xml file representing your desired button style
-     * */
+     */
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    public void setFinishButtonDrawableStyle(Drawable res){
+    public void setFinishButtonDrawableStyle(Drawable res) {
         btnSkip.setBackground(res);
     }
 

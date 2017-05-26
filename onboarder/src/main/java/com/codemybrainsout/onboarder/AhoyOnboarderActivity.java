@@ -2,21 +2,17 @@ package com.codemybrainsout.onboarder;
 
 import android.animation.Animator;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
-import android.support.annotation.IntegerRes;
 import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -138,6 +134,8 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
         } else if (position == firstPagePosition) {
             fadeOut(ivPrev);
             fadeIn(ivNext);
+            hideFinish();
+            fadeIn(circleIndicatorView);
         } else {
             fadeIn(circleIndicatorView);
             hideFinish();

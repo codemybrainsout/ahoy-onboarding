@@ -3,18 +3,18 @@ Onboarding library for android with Gradient, Image or Solid color backgrounds.
 
 ![](preview/preview.gif)
 
-##Installation
+## Installation
 
-###Gradle
+### Gradle
 Add it as a dependency in your app's build.gradle file
 
 ```groovy
 dependencies {
-    compile 'com.codemybrainsout.onboarding:onboarder:1.0.3'
+    compile 'com.codemybrainsout.onboarding:onboarder:1.0.4'
 }
 ```
 
-##How to use
+## How to use
 
 **First of all, you will have to extend your activity like this**
 
@@ -46,7 +46,7 @@ pages.add(ahoyOnboarderCard3);
 setOnboardPages(pages);
 ```
 
-###Choose from one of these three background types
+### Choose from one of these three background types
 
 - **Gradient Background**
 ```java
@@ -84,11 +84,11 @@ Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 setFont(face);
 ```
 
-###Landscape mode
+### Landscape mode
 
 ![](preview/preview-landscape.png)
 
-###Other properties
+### Other properties
 ```java
 
 //Show/Hide navigation controls
@@ -105,24 +105,24 @@ setFinishButtonTitle("Get Started");
 setFinishButtonDrawableStyle(ContextCompat.getDrawable(this, R.drawable.rounded_button));
 ```
 
-##Thanks
+## Thanks
 * [dynamitechetan/Flowing-Gradient](https://github.com/dynamitechetan/Flowing-Gradient)
 * [chyrta/AndroidOnboarder](https://github.com/chyrta/AndroidOnboarder)
 
-##Changelog
+## Changelog
 
-###v1.0.1
+### v1.0.1
 
 Landscape layout by [Maxwell](https://github.com/wax911)
 
-###v1.0.2
+### v1.0.2
 
 FinishButtonDrawableStyle by [Maxwell](https://github.com/wax911)
 
-##Support
+## Support
 If you've any questions regarding this library, please contact us at help@codemybrainsout.com
 
-##Credits
+## Credits
 
 This project was initiated by **Code My Brains Out**. You can contribute to this project by submitting issues or/and by forking this repo and sending a pull request.
 
@@ -134,7 +134,7 @@ Follow us on:
 
 Author: [Rahul Juneja](https://github.com/ahulr)
 
-#License
+# License
 ```
 Copyright (C) 2016 Code My Brains Out
 

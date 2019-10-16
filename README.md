@@ -101,6 +101,9 @@ setActiveIndicatorColor(R.color.white);
 //Set finish button text
 setFinishButtonTitle("Get Started");
 
+//Set finish button color
+setFinishButtonBackground(R.color.black);
+
 //Set the finish button style
 setFinishButtonDrawableStyle(ContextCompat.getDrawable(this, R.drawable.rounded_button));
 ```

@@ -17,6 +17,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -33,7 +34,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
     private CircleIndicatorView circleIndicatorView;
     private ViewPager vpOnboarderPager;
     private AhoyOnboarderAdapter ahoyOnboarderAdapter;
-    private TextView btnSkip;
+    private Button btnSkip;
     private ImageView ivNext, ivPrev;
     private FrameLayout navigationControls;
     private FrameLayout buttonsLayout;
@@ -56,7 +57,7 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
         parentLayout = (RelativeLayout) findViewById(R.id.parent_layout);
         circleIndicatorView = (CircleIndicatorView) findViewById(R.id.circle_indicator_view);
-        btnSkip = (TextView) findViewById(R.id.btn_skip);
+        btnSkip = (Button) findViewById(R.id.btn_skip);
         buttonsLayout = (FrameLayout) findViewById(R.id.buttons_layout);
         navigationControls = (FrameLayout) findViewById(R.id.navigation_layout);
         ivNext = (ImageView) findViewById(R.id.ivNext);
@@ -106,9 +107,11 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
         if (i == R.id.btn_skip && isInLastPage) {
             onFinishButtonPressed();
-        } else if (i == R.id.ivPrev && !isInFirstPage) {
+        }
+        else if (i == R.id.ivPrev && !isInFirstPage) {
             vpOnboarderPager.setCurrentItem(vpOnboarderPager.getCurrentItem() - 1);
-        } else if (i == R.id.ivNext && !isInLastPage) {
+        }
+        else if (i == R.id.ivNext && !isInLastPage) {
             vpOnboarderPager.setCurrentItem(vpOnboarderPager.getCurrentItem() + 1);
         }
     }
@@ -131,12 +134,14 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
             showFinish();
             fadeOut(ivNext);
             fadeIn(ivPrev);
-        } else if (position == firstPagePosition) {
+        }
+        else if (position == firstPagePosition) {
             fadeOut(ivPrev);
             fadeIn(ivNext);
             hideFinish();
             fadeIn(circleIndicatorView);
-        } else {
+        }
+        else {
             fadeIn(circleIndicatorView);
             hideFinish();
             fadeIn(ivPrev);
@@ -267,7 +272,8 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
     public void showNavigationControls(boolean navigation) {
         if (navigation) {
             navigationControls.setVisibility(View.VISIBLE);
-        } else {
+        }
+        else {
             navigationControls.setVisibility(View.GONE);
         }
     }
@@ -332,6 +338,20 @@ public abstract class AhoyOnboarderActivity extends AppCompatActivity implements
 
     public void setFinishButtonTitle(@StringRes int titleResId) {
         btnSkip.setText(titleResId);
+    }
+
+    /**
+     * <br/><br/>
+     * <b>N.B. Builds before LOLLIPOP will use the default style</b>
+     * <br/><br/>
+     * Set the color of the skip/done button, <br/>
+     *
+     * @param colorResId A color res representing your button color
+     */
+    public void setFinishButtonBackground(@ColorRes int colorResId) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            btnSkip.setBackgroundTintList(ContextCompat.getColorStateList(this, colorResId));
+        }
     }
 
     public void setFont(Typeface typeface) {

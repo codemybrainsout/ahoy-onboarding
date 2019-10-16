@@ -35,7 +35,7 @@
             android:layout_marginBottom="25dp"
             android:layout_marginTop="20dp" />
 
-        <TextView
+        <Button
             android:id="@+id/btn_skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

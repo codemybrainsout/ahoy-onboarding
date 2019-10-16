@@ -44,6 +44,7 @@ public class GradientBackgroundExampleActivity extends AhoyOnboarderActivity {
         }
 
         setFinishButtonTitle("Finish");
+        setFinishButtonBackground(R.color.black);
         showNavigationControls(true);
         setGradientBackground();
 
